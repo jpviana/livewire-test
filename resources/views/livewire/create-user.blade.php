@@ -1,4 +1,5 @@
 <div>
+    {{$autor }}
     <form wire:submit="save">
         <x-input-label>Nome </x-input-label>
         <x-text-input type="text" wire:model.lazy="form.name" /> {{ $form->name }}
@@ -27,7 +28,7 @@
         <x-secondary-button wire:click="add">Add user</x-secondary-button>
     </form>
     
-    @foreach ($users as $user)
+    @foreach ($this->usuarios as $user)
         <li>
             {{ $user['name'] }}
         </li>
